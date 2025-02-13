@@ -21,7 +21,6 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
           sudo apt install git -y
 
       - name: Deploy FastApi App
@@ -44,5 +43,6 @@ jobs:
             sudo apt-get install -y python3-venv
             python3 -m venv /home/ubuntu/fastapi-hng4/github-actions-test/venv
             source venv/bin/activate
+            pip3 install fastapi uvicorn
             pip install -r requirements.txt
             sudo nginx -t && sudo systemctl restart nginx
