@@ -35,7 +35,7 @@ jobs:
             fi 
             cd /home/ubuntu/fastapi-app
             if [ ! -d ".git" ]; then
-              git clone https://github.com/Noah-V/fastapi-book-project-noah.git
+              git clone https://github.com/Noah-V/github-actions-test.git
             else
               git pull origin main
             fi
