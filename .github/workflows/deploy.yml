@@ -39,6 +39,11 @@ jobs:
             else
               git pull origin main
             fi
+            sudo apt-get update
+            sudo apt-get install -y python3-venv
+            python3 -m venv /home/ubuntu/fastapi-hng/venv
+            source /home/ubuntu/fastapi-hng/venv/bin/activate
+            pip install --upgrade pip
             pip install -r requirements.txt
             sudo systemctl restart fastapi
             sudo nginx -t && sudo systemctl restart nginx
