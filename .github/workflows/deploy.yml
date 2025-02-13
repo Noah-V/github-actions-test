@@ -30,10 +30,10 @@ jobs:
           username: ubuntu
           key: ${{secrets.SSH_PRIVATE_KEY}}
           script: |
-            if [ ! -d "/home/ubuntu/fastapi-hng" ]; then
-              mkdir -p /home/ubuntu/fastapi-hng
+            if [ ! -d "/home/ubuntu/fastapi-hng2" ]; then
+              mkdir -p /home/ubuntu/fastapi-hng2
             fi 
-            cd /home/ubuntu/fastapi-hng
+            cd /home/ubuntu/fastapi-hng2
             if [ ! -d ".git" ]; then
               git clone https://github.com/Noah-V/github-actions-test.git
             else
