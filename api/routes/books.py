@@ -40,6 +40,7 @@ async def create_book(book: Book):
     return JSONResponse(
         status_code=status.HTTP_201_CREATED, content=book.model_dump()
     )
+print("Book: ", Book)
 
 
 @router.get(
@@ -56,7 +57,7 @@ async def get_book_by_id(book_id: int) -> Book:
             status_code=status.HTTP_404_NOT_FOUND,
             detail=f"Book with id {book_id} not found",
         )
-    print('Book not available')
+    print('Book not available again and it sucks so much')
     return JSONResponse(status_code=status.HTTP_200_OK, content=book.model_dump())
 
 
@@ -66,6 +67,7 @@ async def update_book(book_id: int, book: Book) -> Book:
         status_code=status.HTTP_200_OK,
         content=db.update_book(book_id, book).model_dump(),
     )
+
 
 
 @router.delete("/{book_id}", status_code=status.HTTP_204_NO_CONTENT)
