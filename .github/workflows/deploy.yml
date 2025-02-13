@@ -27,7 +27,7 @@ jobs:
         uses: appleboy/ssh-action@v0.1.7        
         with:
           host: ${{secrets.SERVER_IP}}
-          username: ${{secrets.SERVER_USER}}
+          username: ubuntu
           key: ${{secrets.SSH_PRIVATE_KEY}}
           script: |
             if [ ! -d "/home/ubuntu/fastapi-hng" ]; then
