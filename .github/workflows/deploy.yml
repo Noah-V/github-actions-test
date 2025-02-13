@@ -33,7 +33,7 @@ jobs:
             if [ ! -d "/home/ubuntu/fastapi-hng" ]; then
               mkdir -p /home/ubuntu/fastapi-hng
             fi 
-            cd /home/ubuntu/fastapi-app
+            cd /home/ubuntu/fastapi-hng
             if [ ! -d ".git" ]; then
               git clone https://github.com/Noah-V/github-actions-test.git
             else
